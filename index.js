@@ -10,6 +10,7 @@ const mergeimage = require('merge-images')
 require('@tensorflow/tfjs-node');
 const canvas = require('canvas');
 const faceapi = require('face-api.js');
+const useTinyModel = true;
 
 const { Canvas, Image, ImageData, loadImage } = canvas
 faceapi.env.monkeyPatch({ Canvas, Image, ImageData })
@@ -23,6 +24,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage }).single('image')
 
+async function loadModels() {
+  await faceapi.nets.tinyFaceDetector.loadFromDisk('./public/models')
+  await faceapi.nets.faceLandmark68TinyNet.loadFromDisk('./public/models')
+}
+
+loadModels()
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(cors())
@@ -34,11 +42,9 @@ express()
       if (err) {
         console.log('hata');
       } else {
-        await faceapi.nets.ssdMobilenetv1.loadFromDisk('./public/models')
-        await faceapi.nets.faceLandmark68Net.loadFromDisk('./public/models')
         console.log(req.file)
         loadImage(req.file.path).then(async (image) => {
-          const detectionWithLandmarks = await faceapi.detectSingleFace(image).withFaceLandmarks()
+          const detectionWithLandmarks = await faceapi.detectSingleFace(image,new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks(useTinyModel)
           let mouth = detectionWithLandmarks.landmarks.getMouth();
           let jawOutline = detectionWithLandmarks.landmarks.getJawOutline();
 
