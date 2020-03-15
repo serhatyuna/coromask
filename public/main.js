@@ -17,8 +17,10 @@ function handleSubmit(e) {
       }
   })
   .then(function (response) {
-    console.log(response.data.path)
-    image.src = response.data.path
+    console.log(response.data.b64)
+    let path = response.data.b64;
+    path = path.substring(9,path.length)
+    image.src = path
   })
   .catch(function (error) {
     console.log(error);
