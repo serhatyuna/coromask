@@ -7,15 +7,12 @@ const sharp = require('sharp')
 const PORT = process.env.PORT || 5000
 const mergeimage = require('merge-images')
 
+require('@tensorflow/tfjs-node');
 const canvas = require('canvas');
 const faceapi = require('face-api.js');
 
 const { Canvas, Image, ImageData, loadImage } = canvas
 faceapi.env.monkeyPatch({ Canvas, Image, ImageData })
-
-async () => {
-
-};
 
 const storage = multer.diskStorage({
   destination: './public/images',
@@ -53,7 +50,7 @@ express()
           let maskPath = './public/images/mask' + new Date().getTime() + '.png';
 
           let height =0;
-          sharp('./public/images/mask.png').resize(Math.floor(size)).toFile(maskPath).then(() => {
+          sharp('./public/mask.png').resize(Math.floor(size)).toFile(maskPath).then(() => {
             sharp(maskPath).metadata().then((metadata)=>{
               height = metadata.height;
               let resultPath = './public/images/result' + new Date().getTime() + '.png';
@@ -68,7 +65,7 @@ express()
               res.json({ b64: resultPath })
             })
             })
-            
+
           });
 
         })

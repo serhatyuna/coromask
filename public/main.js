@@ -11,7 +11,7 @@ function handleSubmit(e) {
   let formData = new FormData();
   formData.append("image", imageFile.files[0]);
 
-  axios.post('http://localhost:5000/upload', formData, {
+  axios.post('https://coromask.herokuapp.com/upload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
