@@ -5,7 +5,6 @@ const path = require('path')
 const multer = require('multer')
 const sharp = require('sharp')
 const PORT = process.env.PORT || 5000
-const mergeimage = require('merge-images')
 
 require('@tensorflow/tfjs-node');
 const canvas = require('canvas');
@@ -59,13 +58,14 @@ express()
           sharp('./public/mask.png').resize(Math.floor(size)).toFile(maskPath).then(() => {
             sharp(maskPath).metadata().then((metadata)=>{
               height = metadata.height;
-              let resultPath = './public/images/result' + new Date().getTime() + '.png';
+              let resultPath = './public/images/result' + new Date().getTime();
             sharp(req.file.path)
             .composite([{
               input: maskPath,
               top: Math.floor(minY-height/2),
               left: Math.floor(minX+(size*0.1))
             }])
+            .jpeg()
             .toFile(resultPath)
             .then(() => {
               res.json({ b64: resultPath })
