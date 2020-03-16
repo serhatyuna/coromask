@@ -58,7 +58,7 @@ express()
           sharp('./public/mask.png').resize(Math.floor(size)).toFile(maskPath).then(() => {
             sharp(maskPath).metadata().then((metadata)=>{
               height = metadata.height;
-              let resultPath = './public/images/result' + new Date().getTime();
+              let resultPath = './public/images/result' + new Date().getTime() + '.jpg';
             sharp(req.file.path)
             .composite([{
               input: maskPath,
