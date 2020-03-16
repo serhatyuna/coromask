@@ -44,6 +44,9 @@ express()
         console.log(req.file)
         loadImage(req.file.path).then(async (image) => {
           const detectionWithLandmarks = await faceapi.detectSingleFace(image,new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks(useTinyModel)
+          if (!detectionWithLandmarks) {
+            return res.status(400).json({ error: 'Something went wrong! Please try again with another photo.' })
+          }
           let mouth = detectionWithLandmarks.landmarks.getMouth();
           let jawOutline = detectionWithLandmarks.landmarks.getJawOutline();
 
@@ -68,7 +71,7 @@ express()
             .jpeg()
             .toFile(resultPath)
             .then(() => {
-              res.json({ b64: resultPath })
+              res.status(200).json({ b64: resultPath })
             })
             })
 
