@@ -44,7 +44,7 @@ Photo by **[Andrea Piacquadio](https://www.pexels.com/@olly?utm_content=attribut
 👤 **Serhat Yuna**
 
 - Github: [@serhatyuna](https://github.com/serhatyuna)
-- LinkedIn: [@serhat-yuna-810057187](https://linkedin.com/in/serhat-yuna-810057187)
+- LinkedIn: [@serhatyuna](https://linkedin.com/in/serhatyuna)
 
 👤 **Muhammet Özdamar**
 
