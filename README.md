@@ -1,39 +1,66 @@
-# node-js-getting-started
+<h1 align="center">Welcome to coromask</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.3.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/node-12.x-blue.svg" />
+  <a href="https://github.com/serhatyuna/coromask#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/heroku/node-js-getting-started/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/serhatyuna/coromask/blob/master/LICENSE" target="_blank">
+    <img alt="License: GNU" src="https://img.shields.io/github/license/serhatyuna/coromask" />
+  </a>
+</p>
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+> An app that puts on a mask to your face using face detection with machine learning
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+### 🏠 [Homepage](https://coromask.herokuapp.com)
 
-## Running Locally
+## Prerequisites
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+- node 12.x
+
+## Install
 
 ```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
+npm install
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+## Usage
 
-## Deploying to Heroku
-
+```sh
+npm run start
 ```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+## Example
 
-## Documentation
+[Example photo][https://i.hizliresim.com/usn0xr.png "example photo"]
+Photo by **[Andrea Piacquadio](https://www.pexels.com/@olly?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)** from **[Pexels](https://www.pexels.com/photo/woman-in-pink-and-white-plaid-shirt-3934282/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)**
 
-For more information about using Node.js on Heroku, see these Dev Center articles:
+## Authors
 
-- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+👤 **Serhat Yuna**
+
+- Github: [@serhatyuna](https://github.com/serhatyuna)
+- LinkedIn: [@serhat-yuna-810057187](https://linkedin.com/in/serhat-yuna-810057187)
+
+👤 **Muhammet Özdamar**
+
+- Github: [@muhammeto](https://github.com/muhammeto)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/serhatyuna/coromask/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+This project is [GNU](https://github.com/serhatyuna/coromask/blob/master/LICENSE) licensed.
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
