@@ -4,19 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoroMask</title>
+    <link rel="stylesheet" href="stylesheets/bulma.min.css" />
     <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="icon" href="favicon.png" />
   </head>
   <body>
     <div class="container">
+      <header>
+        <img src="./logo.png" alt="CoroMask" />
+        <p>Please upload a straight photo of your face.</p>
+      </header>
       <form enctype="multipart/form-data" class="fileForm">
-        <input type="file" name="image" class="file" />
-        <input type="submit" value="Submit" />
+        <div class="file has-name is-boxed">
+          <label class="file-label">
+            <input class="fileInput file-input" type="file" name="image" />
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a photo...
+              </span>
+            </span>
+            <span class="file-name has-text-centered"></span>
+          </label>
+        </div>
+        <input type="submit" value="Upload" class="button is-link is-medium" />
       </form>
 
-      <p class="error"></p>
+      <p class="error has-text-centered"></p>
       <img class="image" />
+      <div class="loader-wrapper">
+        <div class="loader is-loading"></div>
+      </div>
     </div>
 
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
   </body>

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding-bottom: 20px;
 }
 
 .container {
@@ -14,6 +15,55 @@ body {
 }
 
 .image {
-  margin-top: 50px;
+  margin-top: 10px;
   width: 100%;
+}
+
+.error {
+  margin-top: 25px;
+}
+
+.fileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fileForm .button {
+  margin-top: 20px;
+}
+
+header {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header img {
+  margin-bottom: 6px
+}
+
+.loader-wrapper {
+  margin-top: 30px;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.loader-wrapper.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.loader-wrapper .loader {
+  height: 60px;
+  width: 60px;
 }
