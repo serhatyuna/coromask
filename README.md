@@ -35,7 +35,7 @@ npm run start
 
 ## Example
 
-[Example photo][https://user-images.githubusercontent.com/32708213/76872306-51280780-687d-11ea-8404-c1611a1700d7.png "example photo"]
+![Example photo][https://user-images.githubusercontent.com/32708213/76872306-51280780-687d-11ea-8404-c1611a1700d7.png "example photo"]
 Photo by **[Andrea Piacquadio](https://www.pexels.com/@olly?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)** from **[Pexels](https://www.pexels.com/photo/woman-in-pink-and-white-plaid-shirt-3934282/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)**
 
 ## Authors
