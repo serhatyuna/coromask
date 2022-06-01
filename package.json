@@ -20,7 +20,7 @@
     "face-api.js": "^0.22.1",
     "fs": "0.0.1-security",
     "multer": "^1.4.2",
-    "sharp": "^0.25.1"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.2",
